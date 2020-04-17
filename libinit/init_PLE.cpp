@@ -44,22 +44,6 @@
 using android::base::GetProperty;
 using android::init::property_set;
 
-void check_device()
-{
-    struct sysinfo sys;
-
-
-/*
- * In some device revisions, there is a sound amplifier that is not activated at
- * startup.
- * In stock init binary file, there is mention of the folder, which in theory is
- * created when you connect the device in the sysfs section.
- * If this method does not work, replace this piece of code with the working
- * method or revert it.
- * If you find a more stable method, then replace it.
- *
- * @Author BeYkeRYkt (21-09-2017)
- */
 void vendor_load_properties()
 {
     init_alarm_boot_properties();
